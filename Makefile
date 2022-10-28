@@ -22,7 +22,7 @@ TARGET  := $(shell uname -s | tr '[A-Z]' '[a-z]' 2>/dev/null || echo unknown)
 # 	LDFLAGS += -Wl,-E
 # endif
 
-LDFLAGS += -pagezero_size 10000 -image_base 100000000
+LDFLAGS += -Wl,-E #-pagezero_size 10000 -image_base 100000000
 LIBS += -ldl
 # CFLAGS += -I/usr/local/include -I/usr/local/opt/openssl/include
 CFLAGS  += -D_POSIX_C_SOURCE=200809L -D_BSD_SOURCE
