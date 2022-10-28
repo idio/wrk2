@@ -35,7 +35,7 @@ BIN  := wrk
 ODIR := obj
 OBJ  := $(patsubst %.c,$(ODIR)/%.o,$(SRC)) $(ODIR)/bytecode.o
 
-LDIR     = deps/luajit/src
+LDIR     = deps/luajit-2.1.0/src
 LIBS    := -lluajit $(LIBS)
 CFLAGS  += -I$(LDIR)
 LDFLAGS += -L$(LDIR)
